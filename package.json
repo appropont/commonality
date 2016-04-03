@@ -35,11 +35,12 @@
     "ember-cli-release": "0.2.8",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^1.2.0",
-    "ember-data": "^2.4.2",
+    "ember-data": "2.4.3",
     "ember-electron": "1.2.2",
     "ember-export-application-global": "^1.0.5",
     "ember-inspector": "1.9.5",
     "ember-load-initializers": "^0.5.1",
+    "ember-localstorage-adapter": "1.0.0-rc.1",
     "ember-resolver": "^2.0.3",
     "loader.js": "^4.0.1"
   },
@@ -78,5 +79,9 @@
       "ProductName": null,
       "InternalName": null
     }
+  },
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "superagent": "^1.8.3"
   }
 }

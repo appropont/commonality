@@ -5,10 +5,13 @@ const electron         = require('electron');
 const app              = electron.app;
 const BrowserWindow    = electron.BrowserWindow;
 const emberAppLocation = `file://${__dirname}/dist/index.html`;
+const BandcampParser   = require('./backend/BandcampParser');
 
 let mainWindow = null;
 
 electron.crashReporter.start();
+
+global.BandcampParser = BandcampParser;
 
 app.on('window-all-closed', function onWindowAllClosed() {
     if (process.platform !== 'darwin') {
@@ -25,7 +28,7 @@ app.on('ready', function onReady() {
     delete mainWindow.module;
 
     // If you want to open up dev tools programmatically, call
-    // mainWindow.openDevTools();
+    mainWindow.openDevTools();
 
     // By default, we'll open the Ember App by directly going to the
     // file system.
